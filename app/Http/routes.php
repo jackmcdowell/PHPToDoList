@@ -13,11 +13,15 @@
 
 Route::get('/', function () 
 {
-	$data = [
-		'name' => 'Jane', 
-		'email' => 'jane@jane.com',
-		'location' => 'Oregon',
-		'last_name' => 'Doe'
-		];
-    return view('welcome')->withData($data);
+    return view('todos/index');
+});
+
+Route::get('/todos', function () 
+{
+    return view('todos/index');
+});
+
+Route::get('/todos/{id}', function ($id) 
+{
+    return view('todos.show')->withId($id);
 });
