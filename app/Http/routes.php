@@ -14,9 +14,10 @@
 Route::get('/', function () 
 {
 	$data = [
-		'name' => 'jane', 
+		'name' => 'Jane', 
 		'email' => 'jane@jane.com',
-		'location' => 'Oregon'
+		'location' => 'Oregon',
+		'last_name' => 'Doe'
 		];
     return view('welcome')->withData($data);
 });
