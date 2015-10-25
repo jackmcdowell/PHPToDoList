@@ -11,15 +11,9 @@
 |
 */
 
-Route::get('/', function () 
-{
-    return view('todos/index');
-});
+Route::get('/', 'TodoListController@index');
 
-Route::get('/todos', function () 
-{
-    return view('todos/index');
-});
+Route::get('/todos', 'TodoListController@index');
 
 Route::get('/todos/{id}', function ($id) 
 {
