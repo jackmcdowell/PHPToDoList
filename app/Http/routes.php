@@ -13,6 +13,4 @@
 
 Route::get('/', 'TodoListController@index');
 
-Route::get('/todos', 'TodoListController@index');
-
-Route::get('/todos/{id}', 'TodoListController@show');
+Route::resource('todos', 'TodoListController');
