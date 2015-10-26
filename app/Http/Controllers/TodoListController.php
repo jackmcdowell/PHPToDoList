@@ -47,7 +47,7 @@ class TodoListController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('todos.show')->withId($id);
     }
 
     /**

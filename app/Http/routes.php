@@ -15,7 +15,4 @@ Route::get('/', 'TodoListController@index');
 
 Route::get('/todos', 'TodoListController@index');
 
-Route::get('/todos/{id}', function ($id) 
-{
-    return view('todos.show')->withId($id);
-});
+Route::get('/todos/{id}', 'TodoListController@show');
