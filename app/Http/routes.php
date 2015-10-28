@@ -13,4 +13,12 @@
 
 Route::get('/', 'TodoListController@index');
 
+Route::get('/db', function ()
+{
+	DB::table('todo_lists')->insert(
+		array('name' => 'Your List')
+		);
+	return DB::table('todo_lists')->get();
+});
+
 Route::resource('todos', 'TodoListController');
