@@ -1,13 +1,12 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class TodoListController extends Controller
+class TodoListController extends Controller 
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +14,8 @@ class TodoListController extends Controller
      */
     public function index()
     {
-        return view('todos.index');
+        $todo_lists = \App\TodoList::all();
+        return view('todos.index')->with("todo_lists", $todo_lists);
     }
 
     /**
